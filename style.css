@@ -1,0 +1,68 @@
+/* regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial;
+    color: white;
+    
+}   
+
+.container{
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+}
+
+.small-text{
+    font-size: 0.8rem;
+}
+
+/* regole parte NAV : Filtri / research */
+#filters{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid green;
+}
+
+#filters select{
+    font-size: 0.9rem;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+/* regole parte MAIN : visualizzazione dischi */
+main>ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+main>ul li{
+    list-style-type: none;
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+}
+
+main>ul li>div{
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: gray;
+}
+
+main>ul li>div>*{
+    margin-bottom: 10px;
+}
+
+main>ul li>div>h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
