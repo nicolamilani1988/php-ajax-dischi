@@ -27,9 +27,9 @@
                 <div>
                     <label for="genre-choice">Filtra per genere</label>
                     <div>
-                        <select class="fa fab" name="genres" id="genres-select">
-                            <option class="fa fab" value="">Scegli il genere</option>
-                            <option class="fa fab">pino</option>
+                        <select v-model="chosenGenre" @change="showGenre" class="fa fab" name="genres" id="genres-select">
+                            <option value="all">Tutti i generi</option>
+                            <option v-for="genre in genres" :value="genre">{{genre}}</option>
                         </select> 
                     </div>  
                 </div>

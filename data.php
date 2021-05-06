@@ -1,4 +1,5 @@
 <?php
+
     header('Content-Type: application/json');
     $db = [
         [
@@ -72,5 +73,19 @@
             "year" => "1987"
         ]
     ];
-    echo json_encode($db);
+
+    $filterDb = [];
+
+    foreach ($db as $album) {
+        if($_GET['genre'] == $album['genre']){
+            
+            $filterDb[] = $album;
+        }
+    };
+
+    if(count($filterDb)<1){
+        $filterDb = $db;
+    };
+    
+    echo json_encode($filterDb);
 ?>
